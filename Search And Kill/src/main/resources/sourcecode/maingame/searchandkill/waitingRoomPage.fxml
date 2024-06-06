@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sourcecode.maingame.searchandkill.WaitingRoomController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/groupChatBackground.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="100.0" arcWidth="100.0" fill="#3136578c" height="435.0" layoutX="225.0" layoutY="70.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" width="475.0" />
+      <Label layoutX="405.0" layoutY="100.0" text="Matching..." textFill="#e7e7e7">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#3136578c" height="83.0" layoutX="282.0" layoutY="157.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" width="371.0" />
+      <ImageView fx:id="p1Icon" fitHeight="50.0" fitWidth="50.0" layoutX="296.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="playerOneName" layoutX="363.0" layoutY="172.0" prefHeight="54.0" prefWidth="294.0" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#3136578c" height="83.0" layoutX="282.0" layoutY="259.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" width="371.0" />
+      <ImageView fx:id="p2Icon" fitHeight="50.0" fitWidth="50.0" layoutX="296.0" layoutY="276.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="playerTwoName" layoutX="363.0" layoutY="274.0" prefHeight="54.0" prefWidth="294.0" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#3136578c" height="83.0" layoutX="282.0" layoutY="361.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" width="371.0" />
+      <ImageView fx:id="p3Icon" fitHeight="50.0" fitWidth="50.0" layoutX="296.0" layoutY="378.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="playerThreeName" layoutX="363.0" layoutY="376.0" prefHeight="54.0" prefWidth="294.0" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

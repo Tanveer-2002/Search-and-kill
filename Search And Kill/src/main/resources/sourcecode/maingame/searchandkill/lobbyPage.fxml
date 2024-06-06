@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sourcecode.maingame.searchandkill.LobbyPageController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/lobbyBackground.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="800.0" layoutY="550.0" mnemonicParsing="false" onAction="#logout" prefHeight="30.0" prefWidth="67.0" style="-fx-background-color: #FDB0B6;" text="Log out">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="name" layoutX="95.0" layoutY="15.0" prefHeight="30.0" prefWidth="219.0" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="levelBar" layoutX="95.0" layoutY="50.0" prefHeight="30.0" prefWidth="200.0" progress="0.0" style="-fx-background-color: #FDB0B6;" />
+      <Label fx:id="level" alignment="CENTER" layoutX="95.0" layoutY="50.0" prefHeight="30.0" prefWidth="200.0" text="Level:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="playButton" layoutX="383.0" layoutY="430.0" mnemonicParsing="false" onAction="#play" onMouseEntered="#getBiggerPlay" onMouseExited="#getSmallerPlay" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #313558;">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="playButtonIcon" fitHeight="40.0" fitWidth="36.0" pickOnBounds="true">
+               <image>
+                  <Image url="@Images/playIcon.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="customMatchButton" layoutX="350.0" layoutY="430.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #313558;" visible="false">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="customMatchButtonIcon" fitHeight="40.0" fitWidth="36.0" pickOnBounds="true" visible="false">
+               <image>
+                  <Image url="@Images/customMatchIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="globalChatButton" layoutX="470.0" layoutY="430.0" mnemonicParsing="false" onAction="#globalChat" onMouseEntered="#getBiggerGChat" onMouseExited="#getSmallerGChat" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #313558;">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="globalChatButtonIcon" fitHeight="40.0" fitWidth="36.0" pickOnBounds="true">
+               <image>
+                  <Image url="@Images/GlobalChatIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="settingsButton" layoutX="830.0" layoutY="30.0" mnemonicParsing="false" onAction="#settings" onMouseEntered="#showSettingsLabel" onMouseExited="#hideSettingsLabel" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #313558;">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/settingsIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="customMatchButtonLabel" layoutX="312.0" layoutY="385.0" text="Coustom match" textFill="WHITE" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="playButtonLabel" layoutX="392.0" layoutY="385.0" text="Play" textFill="WHITE" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="globalChatButtonLabel" layoutX="449.0" layoutY="385.0" text="Global Chat" textFill="WHITE" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="settingsButtonLabel" layoutX="832.0" layoutY="7.0" text="Settings" textFill="WHITE" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="profileButton" layoutX="555.0" layoutY="430.0" maxHeight="75.0" maxWidth="75.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#profile" onMouseEntered="#getBiggerProfile" onMouseExited="#getSmallerProfile" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #313558;">
+         <graphic>
+            <ImageView fx:id="profileButtonIcon" fitHeight="36.0" fitWidth="36.0" pickOnBounds="true">
+               <image>
+                  <Image url="@Images/profileIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="tutorialButton" layoutX="295.0" layoutY="430.0" maxHeight="75.0" maxWidth="75.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#tutorial" onMouseEntered="#getBiggerTutorial" onMouseExited="#getSmallerTutorial" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #313558;">
+         <graphic>
+            <ImageView fx:id="tutorialButtonIcon" fitHeight="40.0" fitWidth="36.0" pickOnBounds="true">
+               <image>
+                  <Image url="@Images/tutorialIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="tutorialButtonLabel" layoutX="290.0" layoutY="385.0" text="Tutorial" textFill="WHITE" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="profileButtonLabel" layoutX="555.0" layoutY="385.0" text="Profile" textFill="WHITE" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="weaponsButton" layoutX="830.0" layoutY="275.0" maxHeight="75.0" maxWidth="75.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#guns" onMouseEntered="#getBiggerWeapons" onMouseExited="#getSmallerWeapons" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #313558;" text="Button">
+         <graphic>
+            <ImageView fx:id="weaponsButtonIcon" fitHeight="40.0" fitWidth="36.0" pickOnBounds="true">
+               <image>
+                  <Image url="@Images/gunsIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="weaponsButtonLabel" layoutX="815.0" layoutY="238.0" text="Weapons" textFill="WHITE" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="avatarsButton" layoutX="830.0" layoutY="185.0" maxHeight="75.0" maxWidth="75.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#avatars" onMouseEntered="#getBiggerAvatars" onMouseExited="#getSmallerAvatars" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #313558;">
+         <graphic>
+            <ImageView fx:id="avatarsButtonIcon" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/avatarsIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="avatarsButtonLabel" layoutX="823.0" layoutY="150.0" text="Avatars" textFill="WHITE" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="100.0" arcWidth="100.0" fill="#31355873" height="300.0" layoutX="337.5" layoutY="75.0" stroke="#fdb0b6" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="2.0" width="225.0" />
+      <ImageView fx:id="avatarIcon" fitHeight="75.0" fitWidth="75.0" layoutX="15.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="avatarDisplay" fitHeight="300.0" fitWidth="225.0" layoutX="337.5" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Mogambo.png" />
+         </image></ImageView>
+      <ImageView fx:id="machineGun" fitHeight="204.0" fitWidth="239.0" layoutX="371.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@MachinGun.png" />
+         </image>
+      </ImageView>
+      <ListView fx:id="onlineplayesListView" layoutX="-150.0" layoutY="160.0" prefHeight="300.0" prefWidth="150.0" style="-fx-background-color: #313557;" />
+      <Button fx:id="onlinePlayersButton" layoutY="285.0" maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onAction="#showOrHideOnlinePlayerList" prefHeight="50.0" prefWidth="52.0" style="-fx-background-color: #313558;">
+         <graphic>
+            <ImageView fitHeight="130.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@openClose.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="onlinePlayesLabel" layoutX="-135.0" layoutY="133.0" text="Online Players" textFill="WHITE" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="seeProfile" layoutX="-150.0" layoutY="460.0" mnemonicParsing="false" onAction="#goToProfile" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #313558;" text="Go To Player Profile" textFill="WHITE" />
+   </children>
+</AnchorPane>

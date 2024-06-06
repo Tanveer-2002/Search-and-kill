@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sourcecode.maingame.searchandkill.GlobalChatPageController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/groupChatBackground.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#3135578a" height="520.0" layoutX="112.5" layoutY="40.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" width="675.0" />
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#313557" height="53.0" layoutX="137.0" layoutY="504.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" width="640.0" />
+      <Rectangle fx:id="chatBox1" arcHeight="30.0" arcWidth="30.0" fill="#313557" height="50.0" layoutX="145.0" layoutY="50.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" visible="false" width="525.0" />
+      <Label fx:id="chatName1" layoutX="160.0" layoutY="55.0" prefHeight="20.0" prefWidth="300.0" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="chatMessage1" layoutX="160.0" layoutY="70.0" prefHeight="30.0" prefWidth="500.0" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="myMessage" layoutX="160.0" layoutY="513.0" prefHeight="25.0" prefWidth="547.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Button layoutX="720.0" layoutY="510.0" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" onAction="#sendMessage" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #C2F1A1;">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@sent.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="goBackButton" layoutX="25.0" layoutY="58.0" mnemonicParsing="false" onAction="#goBack" onMouseEntered="#inGoBackButton" onMouseExited="#outGoBackButton" prefHeight="10.0" prefWidth="50.0" style="-fx-background-color: #FDB0B6;">
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="36.0" pickOnBounds="true">
+               <image>
+                  <Image url="@Images/goBack.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="goBackButtonLabel" layoutX="26.0" layoutY="30.0" text="Go Back" textFill="WHITE" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="chatBox2" arcHeight="30.0" arcWidth="30.0" fill="#313557" height="50.0" layoutX="145.0" layoutY="105.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" visible="false" width="525.0" />
+      <Label fx:id="chatName2" layoutX="160.0" layoutY="110.0" prefHeight="20.0" prefWidth="300.0" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="chatMessage2" layoutX="160.0" layoutY="125.0" prefHeight="30.0" prefWidth="500.0" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="chatBox3" arcHeight="30.0" arcWidth="30.0" fill="#313557" height="50.0" layoutX="145.0" layoutY="160.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" visible="false" width="525.0" />
+      <Label fx:id="chatName3" layoutX="160.0" layoutY="165.0" prefHeight="20.0" prefWidth="300.0" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="chatMessage3" layoutX="160.0" layoutY="180.0" prefHeight="30.0" prefWidth="500.0" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="chatBox4" arcHeight="30.0" arcWidth="30.0" fill="#313557" height="50.0" layoutX="145.0" layoutY="215.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" visible="false" width="525.0" />
+      <Label fx:id="chatName4" layoutX="160.0" layoutY="220.0" prefHeight="20.0" prefWidth="300.0" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="chatMessage4" layoutX="160.0" layoutY="235.0" prefHeight="30.0" prefWidth="500.0" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="chatBox5" arcHeight="30.0" arcWidth="30.0" fill="#313557" height="50.0" layoutX="145.0" layoutY="270.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" visible="false" width="525.0" />
+      <Label fx:id="chatName5" layoutX="160.0" layoutY="275.0" prefHeight="20.0" prefWidth="300.0" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="chatMessage5" layoutX="160.0" layoutY="290.0" prefHeight="30.0" prefWidth="500.0" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="chatBox6" arcHeight="30.0" arcWidth="30.0" fill="#313557" height="50.0" layoutX="145.0" layoutY="325.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" visible="false" width="525.0" />
+      <Label fx:id="chatName6" layoutX="160.0" layoutY="330.0" prefHeight="20.0" prefWidth="300.0" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="chatMessage6" layoutX="160.0" layoutY="345.0" prefHeight="30.0" prefWidth="500.0" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="chatBox7" arcHeight="30.0" arcWidth="30.0" fill="#313557" height="50.0" layoutX="145.0" layoutY="380.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" visible="false" width="525.0" />
+      <Label fx:id="chatName7" layoutX="160.0" layoutY="385.0" prefHeight="20.0" prefWidth="300.0" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="chatMessage7" layoutX="160.0" layoutY="400.0" prefHeight="30.0" prefWidth="500.0" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="chatBox8" arcHeight="30.0" arcWidth="30.0" fill="#313557" height="50.0" layoutX="145.0" layoutY="435.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" visible="false" width="525.0" />
+      <Label fx:id="chatName8" layoutX="160.0" layoutY="440.0" prefHeight="20.0" prefWidth="300.0" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="chatMessage8" layoutX="160.0" layoutY="455.0" prefHeight="30.0" prefWidth="500.0" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="status" layoutX="160.0" layoutY="485.0" textFill="RED" />
+   </children>
+</AnchorPane>

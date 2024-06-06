@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sourcecode.maingame.searchandkill.GunsPageController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/groupChatBackground.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="100.0" arcWidth="100.0" fill="#3135578a" height="520.0" layoutX="113.0" layoutY="30.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" width="675.0" />
+      <Button fx:id="goBackButton" layoutX="25.0" layoutY="58.0" mnemonicParsing="false" onAction="#goBack" onMouseEntered="#inGoBackButton" onMouseExited="#outGoBackButton" prefHeight="10.0" prefWidth="50.0" style="-fx-background-color: #FDB0B6;">
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="36.0" pickOnBounds="true">
+               <image>
+                  <Image url="@Images/goBack.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="goBackButtonLabel" layoutX="26.0" layoutY="30.0" text="Go Back" textFill="WHITE" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="440.0" layoutY="92.0" lineSpacing="17.0" text="Guns:" textFill="WHITE" underline="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="rect2" arcHeight="50.0" arcWidth="50.0" height="120.0" layoutX="160.0" layoutY="170.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" width="120.0">
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.495260663507109" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9098039269447327" green="0.9098039269447327" blue="0.9098039269447327" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill></Rectangle>
+      <Rectangle fx:id="rect3" arcHeight="50.0" arcWidth="50.0" height="120.0" layoutX="315.0" layoutY="170.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" width="120.0">
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.495260663507109" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9098039269447327" green="0.9098039269447327" blue="0.9098039269447327" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill></Rectangle>
+      <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="160.0" layoutY="170.0" onMouseClicked="#selectRiffel" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Guns/riffel.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="315.0" layoutY="170.0" onMouseClicked="#selectMachinGun" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Guns/MachinGun.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="403.0" layoutY="182.0" mnemonicParsing="false" onAction="#showOrHideMGunInfo" text="i" />
+      <Button layoutX="248.0" layoutY="183.0" mnemonicParsing="false" onAction="#showOrHideRiffleInfo" prefHeight="20.0" prefWidth="19.0" text="i" />
+      <Label fx:id="rd" layoutX="187.0" layoutY="300.0" text="Damage: 10" textFill="#e1e1e1" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="rr" layoutX="186.0" layoutY="318.0" prefHeight="20.0" prefWidth="80.0" text="Range 100%" textFill="#e1e1e1" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="md" layoutX="347.0" layoutY="299.0" text="Damage: 20" textFill="#e1e1e1" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="mr" layoutX="346.0" layoutY="317.0" prefHeight="17.0" prefWidth="73.0" text="Range 60%" textFill="#e1e1e1" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
